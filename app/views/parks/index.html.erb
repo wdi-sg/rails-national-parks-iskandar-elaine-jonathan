@@ -1,6 +1,6 @@
 <h1>All Parks</h1>
-<p>Find me in app/views/parks/index.html.erb</p>
 
 <% @parks.each do |park| %>
   <a href="/parks/<%= park.id %>"><%= park.name%></a>
+  <br><img src="<%= park.picture %>" alt="">
 <% end %>
