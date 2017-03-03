@@ -10,7 +10,7 @@ class ParksController < ApplicationController
 
   def create
   end
-  
+
   def edit
   end
 
@@ -19,6 +19,7 @@ class ParksController < ApplicationController
 
   def destroy
   end
+  
   # def create
   #   @park = Park.new(message_params)
   #   if @park.save

@@ -2,6 +2,6 @@
 
 <% @parks.each do |park| %>
   <a href="/parks/<%= park.id %>"><%= park.name%></a>
-  <br><img style="width: 300px;" src="<%= park.picture %>" alt="">
+  <br><img src="<%= park.picture %>" alt="">
   <br>
 <% end %>
