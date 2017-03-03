@@ -12,12 +12,16 @@ class ParksController < ApplicationController
 
   def show
     @park = Park.find(params[:id])
-
+    # byebug # stops the rails at this specific code line and you can query anything before the byebug
     respond_to do |format|
       format.html
       format.json { render json: @park }
     end
-    
+
+  end
+
+  def new
+    @new_park = Park.new
   end
 
   def create
@@ -33,12 +37,12 @@ class ParksController < ApplicationController
   end
 
   # def create
-  #   @park = Park.new(message_params)
-  #   if @park.save
-  #     redirect_to '/parks'
-  #   else
-  #     render 'new'
-  #   end
+  # @park = Park.new(message_params)
+  # if @park.save
+  #   redirect_to '/parks'
+  # else
+  #   render 'new'
+  # end
   # end
 
   # private
