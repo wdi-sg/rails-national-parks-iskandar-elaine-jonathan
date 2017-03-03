@@ -24,7 +24,21 @@ class ParksController < ApplicationController
     @new_park = Park.new
   end
 
+  # new and create must have the same @new_park. They must refer to the same thing.
+
   def create
+    @new_park = Park.new(park_params)
+    if @new_park.save
+
+      respond_to do |format|
+        format.html { redirect_to parks_path }
+        format.json { render json: { message: 'Success creating new park'} }
+      end
+
+      redirect_to parks_path
+    else
+      render new_park_path
+    end
   end
 
   def edit
@@ -37,18 +51,12 @@ class ParksController < ApplicationController
   end
 
   # def create
-  # @park = Park.new(message_params)
-  # if @park.save
-  #   redirect_to '/parks'
-  # else
-  #   render 'new'
-  # end
   # end
 
-  # private
-  #
-  # def message_params
-  #   params.require(:message).permit(:content)
-  # end
+  private
+
+  def park_params
+    params.require(:park).permit(:name, :description, :picture)
+  end
 
 end
