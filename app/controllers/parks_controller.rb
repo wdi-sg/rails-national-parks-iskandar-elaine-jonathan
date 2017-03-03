@@ -17,7 +17,6 @@ class ParksController < ApplicationController
       format.html
       format.json { render json: @park }
     end
-
   end
 
   def new
@@ -42,9 +41,27 @@ class ParksController < ApplicationController
   end
 
   def edit
+    # getting an existing park
+
+    # get from params[:id]
+
+    # render the bootstrap edit form
   end
 
   def update
+    # send the edit request (hint: PATCH or PUT request) - override the post method to a PATCH or PUT request
+
+    # find an existing park object with the id from form_data
+
+    # save the updated park object
+
+    # if can save
+
+    # redirect to parks_path
+
+    # else
+
+    # render the edit page
   end
 
   def destroy
