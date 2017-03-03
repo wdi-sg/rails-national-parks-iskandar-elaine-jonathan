@@ -1,5 +1,7 @@
-<h1><%= @park.name %></h1>
+<div class="page-header text-center">
+  <h1><%= @park.name %><small> <%= @park.description %></small></h1>
+</div>
 
-<p><%= @park.description %></p>
-
+<div class="container text-center">
 <img src="<%= @park.picture %>" alt="park picture">
+</div>
