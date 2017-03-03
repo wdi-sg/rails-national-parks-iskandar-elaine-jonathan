@@ -41,34 +41,23 @@ class ParksController < ApplicationController
   end
 
   def edit
-    # getting an existing park
-
-    # get from params[:id]
-
-    # render the bootstrap edit form
+    @edit_park = Park.find(params[:id])
   end
 
   def update
-    # send the edit request (hint: PATCH or PUT request) - override the post method to a PATCH or PUT request
+    @edit_park = Park.find(params[:id])
+    if @edit_park.update_attributes(park_params)
+      redirect_to parks_path
+    else
+      render 'edit' # why do we get an error when we use edit_park_path?
+    end
 
-    # find an existing park object with the id from form_data
-
-    # save the updated park object
-
-    # if can save
-
-    # redirect to parks_path
-
-    # else
-
-    # render the edit page
   end
 
   def destroy
+    @destroy_park = Park.find(params[:id]).destroy
+    redirect_to parks_path
   end
-
-  # def create
-  # end
 
   private
 

@@ -1,0 +1,8 @@
+<h1>Update Park</h1>
+
+<%= bootstrap_form_for(@edit_park, inline_errors: true) do |f| %>
+  <%= f.text_field :name, label: "Park Name", placeholder: "Enter the park name", icon: "tree-conifer"%>
+  <%= f.text_field :description, label: "Description", placeholder: "Describe your park", icon: "list"%>
+  <%= f.text_field :picture, placeholder: "Please enter valid URL", icon: "camera"%>
+  <%= f.primary "Submit" %>
+<% end %>
