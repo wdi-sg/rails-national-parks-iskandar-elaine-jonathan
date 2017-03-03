@@ -2,10 +2,22 @@ class ParksController < ApplicationController
 
   def index
     @parks = Park.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @parks }
+    end
+
   end
 
   def show
     @park = Park.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @park }
+    end
+    
   end
 
   def create
@@ -19,7 +31,7 @@ class ParksController < ApplicationController
 
   def destroy
   end
-  
+
   # def create
   #   @park = Park.new(message_params)
   #   if @park.save
