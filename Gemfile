@@ -7,6 +7,7 @@ end
 gem 'faker'
 gem 'pry'
 gem 'bootstrap-sass'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
@@ -49,6 +50,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # custom development guard
+  # How to refresh your server without refreshing - automatically watch for changes. Every change you make in your views or assets will reload the server
+  gem 'guard', :require => false
+  gem 'guard-livereload', :require => false
+  gem 'rack-livereload' # Rack is the engine that runs Rails
+  gem 'rb-fsevent', :require => false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
