@@ -8,6 +8,17 @@ class ParksController < ApplicationController
     @park = Park.find(params[:id])
   end
 
+  def create
+  end
+  
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
   # def create
   #   @park = Park.new(message_params)
   #   if @park.save
