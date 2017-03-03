@@ -7,6 +7,7 @@ end
 gem 'faker'
 gem 'pry'
 gem 'bootstrap-sass'
+gem 'bootstrap_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

@@ -12,8 +12,11 @@
  *
  */
 
+ // "bootstrap-sprockets" must ALWAYS BE AT THE TOP and "bootstrap-variables" MUST ALWAYS BE RIGHT BEFORE "BOOTSTRAP"
  @import "bootstrap-sprockets";
+ @import "rails_bootstrap_forms";
  @import "bootstrap-variables";
  @import "bootstrap";
+ 
  @import "theme/theme_file";
  @import "parks";
